@@ -2,6 +2,7 @@ extends layout
 
 block content
   .bodyWrapper
+   .card
     .toolbar
       .toolbar__left(class='mr++')
         lx-dropdown(position='left', from-top='')
@@ -39,6 +40,7 @@ block content
               li
                 a.dropdown-link Separated link
         lx-search-filter(closed='', theme='dark')
+
 
   script(src='/bower_components/jquery/dist/jquery.js')
   script(src='/bower_components/velocity/velocity.js')
