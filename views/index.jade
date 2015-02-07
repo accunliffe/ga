@@ -2,13 +2,14 @@ extends layout
 
 block content
   .bodyWrapper
-   .card
-    .toolbar
-      .toolbar__left(class='mr++')
-        lx-dropdown(position='left', from-top='')
-          button.btn.btn--l.btn--black.btn--icon(lx-ripple='', lx-dropdown-toggle='')
-            i.mdi.mdi--menu
-          lx-dropdown-menu
+    .card
+      .toolbar.bgc-blue-A400
+        span.toolbar__label.fs-title.ml.tc-white LendEffort
+        .toolbar__right
+          lx-dropdown(position='right', from-top='')
+            button.btn.btn--l.btn--white.btn--icon(lx-ripple='', lx-dropdown-toggle='')
+              i.mdi.mdi--menu
+            lx-dropdown-menu
               ul
                 li
                   a.dropdown-link Action
@@ -21,25 +22,20 @@ block content
                   a.dropdown-link.dropdown-link--is-header Header
                 li
                   a.dropdown-link Separated link
-      span.toolbar__label.fs-title.ml Lorem Ipsum
-      .toolbar__right
-        lx-dropdown(position='right', from-top='')
-          button.btn.btn--l.btn--black.btn--icon(lx-ripple='', lx-dropdown-toggle='')
-            i.mdi.mdi--more-vert
-          lx-dropdown-menu
-            ul
-              li
-                a.dropdown-link Action
-              li
-                a.dropdown-link Another action
-              li
-                a.dropdown-link Something else here
-              li.dropdown-divider
-              li
-                a.dropdown-link.dropdown-link--is-header Header
-              li
-                a.dropdown-link Separated link
-        lx-search-filter(closed='', theme='dark')
+          lx-search-filter(closed='', theme='dark')
+    .card.heroImage
+      h1 this is a title
+      p This is a sentence about empowerment
+      .btn.btn--m.btn--white.btn--raised
+        .heroInput(flex-container='row')
+          div(flex-item='')
+            lx-text-field(label='$40,000', type='area', model='textFields.description')
+              textarea(ng-model='textFields.description')
+      <br>
+      button.btn.btn--m.btn--white.btn--raised(lx-ripple='') Button
+    .card.process
+      
+
 
 
   script(src='/bower_components/jquery/dist/jquery.js')
