@@ -1,46 +1,44 @@
 extends layout
 
 block content
-  .bodyWrapper
-    .card
-      .toolbar.bgc-blue-A400
-        span.toolbar__label.fs-title.ml.tc-white LendEffort
-        .toolbar__right
-          lx-dropdown(position='right', from-top='')
-            button.btn.btn--l.btn--white.btn--icon(lx-ripple='', lx-dropdown-toggle='')
-              i.mdi.mdi--menu
-            lx-dropdown-menu
-              ul
-                li
-                  a.dropdown-link Action
-                li
-                  a.dropdown-link Another action
-                li
-                  a.dropdown-link Something else here
-                li.dropdown-divider
-                li
-                  a.dropdown-link.dropdown-link--is-header Header
-                li
-                  a.dropdown-link Separated link
-          lx-search-filter(closed='', theme='dark')
-    .card.heroImage
-      h1 this is a title
-      p This is a sentence about empowerment
-      .btn.btn--m.btn--white.btn--raised
-        .heroInput(flex-container='row')
-          div(flex-item='')
-            lx-text-field(label='$40,000', type='area', model='textFields.description')
-              textarea(ng-model='textFields.description')
-      <br>
-      button.btn.btn--m.btn--white.btn--raised(lx-ripple='') Button
-    .card.process
-      
+  .container-fluid.hidden-phone.hidden-tablet(ng-controller='AppCtrl as app')   
+      nav#nav.navbar.row-fluid(role='navigation')
+        .rmenu
+          h3.menutext Brand Name
+          .menubutton.desktop(type='button', data-toggle='dropdown')
+            img.logo5.desktop(src='/images/3lines.png')
+          ul#menu.dropdown-menu.dropdown-menu-right(role='menu', aria-labelledby='dropdownMenu1')
+            li#div1(role='presentation')
+              a(role='menuitem', tabindex='-1', href='#aboutMe', data-id='div1') something
+            li.divider(role='presentation')
+            li#div2(role='presentation')
+              a(role='menuitem', tabindex='-1', href='#stockickr', data-id='div2') something
+            li.divider(role='presentation')
+      .mainwrapper  
+        section.module.parallax.parallax-1
+          .container(ng-controller='ModalCtrl')
+            h3 sentence about empowerment
+            form.hero
+              .form-group
+                label How much does your business need to reach its goal?
+                input.form-control(type='email', placeholder='$40,000')
+            <br>
+            button#btn.btn.btn-primary(ng-controller='BtnCtrl as btn', type='button', ng-model='singleModel', ng-click="open()")  More    
 
+        section.module.content#aboutMe
+          p.line
+          h2 steps in the process
+          
 
 
   script(src='/bower_components/jquery/dist/jquery.js')
-  script(src='/bower_components/velocity/velocity.js')
-  script(src='/bower_components/moment/min/moment-with-locales.min.js')
-  script(src='/bower_components/angular/angular.js')
-  script(src='/bower_components/lumx/dist/js/lumx.js')
+  script(src='/bower_components/bootstrap/dist/js/bootstrap.js')
+  script(src='js/lib/angular/angular.js')
+  script(src='js/lib/angular/angular-route.js')
+  script(src='js/ui-bootstrap-tpls.min.js')
   script(src='/js/app.js')
+  script(src='/js/controllers.js')
+  //script(src='/bower_components/velocity/velocity.js')
+  //script(src='/bower_components/moment/min/moment-with-locales.min.js')  
+  //script(src='/bower_components/lumx/dist/js/lumx.js')
+  
