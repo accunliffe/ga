@@ -182,9 +182,13 @@ section
       height 400px
       background-color white
     &.parallax
+      @media screen and (max-width: 1150px)
+        height 550px
+      @media screen and (min-width: 1700px)
+        height 1200px
       padding-top 5%
-      height 500px
-      background-position 50% 50%
+      height 600px
+      background-position center center
       background-repeat no-repeat
       background-attachment fixed
       background-size cover
@@ -199,7 +203,13 @@ section
         font-size 96px
       h3
         color blue
+        padding-top 25%
+        padding-bottom 0
       label
+        color blue
+      p
+        padding 0
+        margin 0 0 15px 0
         color blue
       &.parallax-1
         background-image url("/images/nursery2.jpg")
@@ -209,3 +219,153 @@ form.hero
   text-align center
   position relative
   display inline-block
+
+#btn
+  text-align center !important
+  position relative
+  display inline-block
+  background-color rgba(110,110,110,0.55)    
+  width auto
+  height 50px
+  border-color #ffffff
+.moder
+  margin 2.5% 32.5px 0 32.5px !important
+  width auto
+  height auto
+  display inline-block
+
+.icon-wrapper
+  color #ffffff
+
+#btn2
+  position relative
+  background-color rgba(214,214,214,0.60)    
+  width auto
+  height auto
+  border-color #ffffff
+  
+//modal styles
+.modal-dialog
+  width 95%
+  height 90%
+
+.modal-header
+  height 60px
+  text-align center
+  width auto
+
+.modal-body
+  height auto
+  text-align center
+
+.buttonWrapper
+  height 100px
+  
+h3.modal-title
+  width auto
+  display inline-block
+  
+button.btn.btn-warning
+  float right
+  background-color rgba(214,214,214,0.60)  
+  border-color #ffffff
+  color #444345
+  display inline-block
+ 
+  
+button.btn.btn-warning.prot
+  float none
+  background-color rgba(84,115,240,0.90)
+  color white
+  position relative
+  margin-top 30px
+  height 80px
+  width 10%
+  font-size 120%
+  min-width 200px
+  display inline-block
+  margin 10px 10px 10px 10px
+  
+button.btn.btn-warning.resume
+  float none
+  background-color rgba(240,173,78,0.90)
+  color white
+  position relative
+  margin-top 30px
+  height 80px
+  width 10%
+  font-size 120%
+  min-width 200px
+  display inline-block
+  margin 10px 10px 10px 10px
+  
+button.btn.btn-warning.bottom
+  background-color rgba(214,214,214,0.90)  
+  border-color #ffffff
+  color #444345
+  float none
+  position relative
+  margin-top 30px
+  height 80px
+  width 10%
+  font-size 120%
+  min-width 200px
+  display inline-block
+  margin 10px 10px 10px 10px
+  
+.verticalLine
+  width 1%
+  height 600px
+  border-right medium solid #D3D3D3
+  display inline-block
+  position relative
+  
+.left
+  float left
+  display inline-block
+  position relative
+  width 48.5%
+
+.right
+  float right !important
+  display inline-block
+  position relative
+  width 48.5%
+  text-align center
+  
+h4.modalContent.topper
+  max-width 1000px
+  border-bottom 1px solid #D3D3D3
+  text-align left
+  margin 0 auto 10px auto
+  padding-top 40px
+  
+h4.modalContent
+  max-width 1000px
+  border-bottom 1px solid #D3D3D3
+  text-align left
+  margin 0 auto 10px auto
+  padding-top 40px
+  
+p.moder1
+  text-align left
+  margin 15px auto 25px auto
+  max-width 1000px
+  font-size 120%
+  
+p.moder2
+  text-align center
+  margin 30px auto 30px auto
+  max-width 1000px
+  font-size 120%
+  
+.zoom
+  width 80%
+  height 80%
+  -webkit-transition 1.4s ease-in-out
+  -moz-transition 1.4s ease-in-out
+  -o-transition 1.4s ease-in-out
+  transition 1.4s ease-in-out
+  &:hover
+    width 100% !important
+    height 100% !important

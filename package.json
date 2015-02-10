@@ -1,6 +1,6 @@
 {
   "name": "gasnapld",
-  "version": "0.0.1-18",
+  "version": "0.0.1-19",
   "private": true,
   "scripts": {
     "start": "node app.js"
@@ -9,8 +9,7 @@
     "express": "3.6.0",
     "jade": "*",
     "stylus": "*",
-    "angular": "*",
-    "jquery": "*"
+    "angular": "*"
   },
   "subdomain": "gasnapld",
   "engines": {
